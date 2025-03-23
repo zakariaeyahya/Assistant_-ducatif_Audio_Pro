@@ -35,8 +35,7 @@ Ce projet vise à fournir un assistant éducatif capable de guider les étudiant
 
 1. Clonez le dépôt :
    ```bash
-   git clone <URL_DU_DEPOT>
-   cd <NOM_DU_DEPOT>
+   git clone https://github.com/zakariaeyahya/Assistant_-ducatif_Audio_Pro.git
    ```
 
 2. Installez les dépendances :
