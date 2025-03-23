@@ -1,0 +1,15 @@
+PyPDF2 
+llama-index 
+qdrant-client
+llama-index-embeddings-huggingface
+llama-index-vector-stores-qdrant 
+llama-index 
+llama-index-vector-stores-qdrant
+langchain 
+langchain-community
+rank_bm25
+angchain 
+langchain-groq 
+mlflow
+openai-whisper
+python-multipart
