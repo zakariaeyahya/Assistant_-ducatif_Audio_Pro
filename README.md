@@ -46,6 +46,7 @@ Ce projet vise à fournir un assistant éducatif capable de guider les étudiant
 3. Assurez-vous que FFmpeg est installé et accessible dans votre PATH.
 
 ## Utilisation
+![image](https://github.com/user-attachments/assets/e5fa9758-f23d-410f-be42-79cd22d9e47d)
 
 ### Indexation de Documents PDF
 
