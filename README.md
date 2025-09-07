@@ -1,100 +1,86 @@
-# Projet d'Assistant Éducatif 
 
-Ce projet combine plusieurs scripts Python pour créer un système d'assistant éducatif interactif, utilisant des techniques avancées de traitement du langage naturel (NLP) et de recherche hybride. Il inclut des fonctionnalités pour l'indexation de documents PDF, la recherche hybride, la transcription audio, et une interface utilisateur interactive.
+---
 
-## Table des Matières
+# Educational Assistant Project
 
+This project combines several Python scripts to create an interactive educational assistant system, using advanced natural language processing (NLP) and hybrid search techniques. It includes features for PDF document indexing, hybrid search, audio transcription, and an interactive user interface.
+
+## Table of Contents
 1. [Introduction](#introduction)
-2. [Fonctionnalités](#fonctionnalités)
-3. [Configuration](#configuration)
-4. [Utilisation](#utilisation)
-5. [Structure du Projet](#structure-du-projet)
-6. [Licence](#licence)
+2. [Features](#features)
+3. [Setup](#setup)
+4. [Usage](#usage)
+5. [Project Structure](#project-structure)
+6. [License](#license)
 
 ## Introduction
+This project aims to provide an educational assistant capable of guiding students in their learning using advanced search techniques and a language model. It uses MLflow to track performance and interactions, enabling continuous system improvement.
 
-Ce projet vise à fournir un assistant éducatif capable de guider les étudiants dans leur apprentissage en utilisant des techniques de recherche avancées et un modèle de langage. Il utilise MLflow pour suivre les performances et les interactions, permettant ainsi une amélioration continue du système.
+## Features
+- **PDF Document Indexing**: Extracts and indexes text from PDF files for efficient search.
+- **Hybrid Search**: Combines BM25 and vector search methods for more relevant results.
+- **Audio Transcription**: Transcribes audio files to text using the Whisper model.
+- **Educational Assistant**: Provides guided answers to student questions.
+- **User Interface**: Interactive web application using Streamlit to interact with the assistant.
 
-## Fonctionnalités
-
-- **Indexation de Documents PDF** : Extrait et indexe le texte des fichiers PDF pour une recherche efficace.
-- **Recherche Hybride** : Combine les méthodes de recherche BM25 et vectorielle pour des résultats plus pertinents.
-- **Transcription Audio** : Transcrit des fichiers audio en texte en utilisant le modèle Whisper.
-- **Assistant Éducatif** : Fournit des réponses guidées aux questions des étudiants.
-- **Interface Utilisateur** : Application web interactive utilisant Streamlit pour interagir avec l'assistant.
-
-## Configuration
-
-### Prérequis
-
+## Setup
+### Prerequisites
 - Python 3.x
-- Bibliothèques Python : `PyPDF2`, `LlamaIndex`, `Qdrant`, `Langchain`, `FastAPI`, `Streamlit`, `Whisper`, `MLflow`, etc.
-- FFmpeg (pour la transcription audio)
+- Python Libraries: `PyPDF2`, `LlamaIndex`, `Qdrant`, `Langchain`, `FastAPI`, `Streamlit`, `Whisper`, `MLflow`, etc.
+- FFmpeg (for audio transcription)
 
 ### Installation
-
-1. Clonez le dépôt :
+1. Clone the repository:
    ```bash
    git clone https://github.com/zakariaeyahya/Assistant_-ducatif_Audio_Pro.git
    ```
-
-2. Installez les dépendances :
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+3. Ensure FFmpeg is installed and available in your PATH.
 
-3. Assurez-vous que FFmpeg est installé et accessible dans votre PATH.
-
-## Utilisation
+## Usage
 ![image](https://github.com/user-attachments/assets/e5fa9758-f23d-410f-be42-79cd22d9e47d)
 
-### Indexation de Documents PDF
-
-Pour indexer des documents PDF, exécutez :
+### PDF Document Indexing
+To index PDF documents, run:
 ```bash
 python stockage/stock.py
 ```
 
-### Recherche Hybride
-
-Pour effectuer une recherche hybride, exécutez :
+### Hybrid Search
+To perform a hybrid search, run:
 ```bash
 python services/HybridSearch.py
 ```
 
-### Transcription Audio
-
-Pour transcrire des fichiers audio, exécutez :
+### Audio Transcription
+To transcribe audio files, run:
 ```bash
-python services/audio_transcribe.py --file <CHEMIN_DU_FICHIER_AUDIO>
+python services/audio_transcribe.py --file <AUDIO_FILE_PATH>
 ```
 
-### Assistant Éducatif
-
-Pour lancer l'assistant éducatif, exécutez :
+### Educational Assistant
+To launch the educational assistant, run:
 ```bash
 python services/chat.py
 ```
 
-### Interface Utilisateur
-
-Pour démarrer l'application Streamlit, exécutez :
+### User Interface
+To start the Streamlit application, run:
 ```bash
 streamlit run frontend/streamlit_app.py
 ```
 
-## Structure du Projet
+## Project Structure
+- `stockage/`: Scripts for PDF document indexing.
+- `services/`: Scripts for hybrid search, audio transcription, and the educational assistant.
+- `Searching/`: Scripts for vector and BM25 search.
+- `api/`: FastAPI for interacting with the educational assistant and audio transcription service.
+- `frontend/`: Streamlit application for the user interface.
 
-- `stockage/` : Scripts pour l'indexation de documents PDF.
-- `services/` : Scripts pour la recherche hybride, la transcription audio, et l'assistant éducatif.
-- `Searching/` : Scripts pour la recherche vectorielle et BM25.
-- `api/` : API FastAPI pour interagir avec l'assistant éducatif et le service de transcription audio.
-- `frontend/` : Application Streamlit pour l'interface utilisateur.
-
-## Licence
-
-Ce projet est sous licence [Nom de la Licence]. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+## License
+This project is licensed under [License Name]. See the [LICENSE](LICENSE) file for more details.
 
 ---
-
-Ce fichier README fournit une vue d'ensemble complète du projet, y compris les instructions pour la configuration et l'utilisation, ainsi que des informations sur la structure du projet et la manière de contribuer.
